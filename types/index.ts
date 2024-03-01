@@ -46,6 +46,12 @@ export interface LoginModalStore {
     onClose: ()=> void
 }
 
+export interface RentModalStore {
+    isOpen: boolean
+    onOpen: ()=> void
+    onClose: ()=> void
+}
+
 
 export interface HeadingProps {
     title: string,
@@ -91,3 +97,9 @@ export interface CategoryBoxProps{
     selected?: boolean
 }
 
+export interface CategoryInputProps{
+    icon: IconType
+    label: string
+    selected?: boolean
+    onClick: (value: string) => void
+}
