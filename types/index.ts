@@ -64,10 +64,24 @@ export interface InputProps {
     errors: FieldErrors
 }
 
+export type SafeUser = Omit<
+    User,
+    "createdAt" | "updatedAt" | "emailVerified" 
+    > & {
+    createdAt: string
+    updatedAt: string
+    emailVerified: string | null
+    }
+
 export interface NavbarProps{
-    currentUser?: User | null
+    currentUser?: SafeUser | null
 }
 
 export interface UserMenuProps{
-    currentUser?: User | null
+    currentUser?: SafeUser | null
 }
+
+export interface AvatarProps{
+    src?: string | null | undefined
+}
+
