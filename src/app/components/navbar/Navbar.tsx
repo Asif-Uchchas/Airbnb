@@ -5,6 +5,7 @@ import Logo from './Logo'
 import Search from './Search'
 import Usermenu from './Usermenu'
 import { NavbarProps } from '../../../../types'
+import Categories from './Categories'
 
 
 const Navbar = ({
@@ -22,7 +23,8 @@ const Navbar = ({
                   </div>
                   
               </Container>
-          </div>
+      </div>
+      <Categories />
     </nav>
   )
 }

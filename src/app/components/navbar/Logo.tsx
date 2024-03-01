@@ -9,7 +9,8 @@ const Logo = () => {
     const router = useRouter()
   return (
     <div>
-          <Image
+      <Image
+              onClick={() => router.push("/")}
               src={logo}
               alt="logo"
               height={100}

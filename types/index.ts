@@ -85,3 +85,9 @@ export interface AvatarProps{
     src?: string | null | undefined
 }
 
+export interface CategoryBoxProps{
+    icon: IconType
+    label: string
+    selected?: boolean
+}
+
