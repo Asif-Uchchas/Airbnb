@@ -1,3 +1,4 @@
+import { User } from "@prisma/client";
 import React from "react";
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 import { IconType } from "react-icons";
@@ -39,6 +40,13 @@ export interface RegisterModalStore {
     onClose: ()=> void
 }
 
+export interface LoginModalStore {
+    isOpen: boolean
+    onOpen: ()=> void
+    onClose: ()=> void
+}
+
+
 export interface HeadingProps {
     title: string,
     subtitle?: string,
@@ -54,4 +62,12 @@ export interface InputProps {
     required?: boolean
     register: UseFormRegister<FieldValues>
     errors: FieldErrors
+}
+
+export interface NavbarProps{
+    currentUser?: User | null
+}
+
+export interface UserMenuProps{
+    currentUser?: User | null
 }
