@@ -103,3 +103,4 @@ export interface CategoryInputProps{
     selected?: boolean
     onClick: (value: string) => void
 }
+
