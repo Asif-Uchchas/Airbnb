@@ -4,6 +4,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, install the dependencies:
 
 ```bash
+Here is the website [`Airbnb`](https://airbnb-indol-eta.vercel.app/).
+```
+
+```bash
 npm install
 # or
 yarn install
