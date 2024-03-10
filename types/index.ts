@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import { Listing, User } from "@prisma/client";
 import React from "react";
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 import { IconType } from "react-icons";
@@ -68,6 +68,13 @@ export interface InputProps {
     required?: boolean
     register: UseFormRegister<FieldValues>
     errors: FieldErrors
+}
+
+export type SafeListing = Omit<
+    Listing,
+    "createdAt" 
+    > & {
+    "createdAt" : string
 }
 
 export type SafeUser = Omit<
