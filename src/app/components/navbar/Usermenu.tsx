@@ -8,8 +8,11 @@ import useLoginModal from "@/app/hooks/useLoginModal";
 import useRentModal from "@/app/hooks/useRentModal";
 import { UserMenuProps } from "../../../../types";
 import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
-const Usermenu = ({currentUser}: UserMenuProps) => {
+const Usermenu = ({ currentUser }: UserMenuProps) => {
+  
+  const router = useRouter()
 
   const registerModel = useRegisterModal();
   const loginModal = useLoginModal()
@@ -56,7 +59,7 @@ const Usermenu = ({currentUser}: UserMenuProps) => {
             {currentUser ? (
                   <>
                   <MenuItem
-                      onClick={()=> {}}
+                      onClick={()=> router.push("/trips")}
                       label="My trips"
                   />
                   <MenuItem
