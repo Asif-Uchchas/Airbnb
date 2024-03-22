@@ -70,12 +70,9 @@ export interface InputProps {
     errors: FieldErrors
 }
 
-export type SafeListing = Omit<
-    Listing,
-    "createdAt" 
-    > & {
-    "createdAt" : string
-}
+export type SafeListing = Omit<Listing, "createdAt"> & {
+    createdAt: string;
+  };
 
 export type SafeUser = Omit<
     User,

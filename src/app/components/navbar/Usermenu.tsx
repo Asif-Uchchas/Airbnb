@@ -71,7 +71,7 @@ const Usermenu = ({ currentUser }: UserMenuProps) => {
                       label="My reservatons"
                   />
                   <MenuItem
-                      onClick={()=> {}}
+                      onClick={()=> router.push("/properties")}
                       label="My properties"
                   />
                   <MenuItem
