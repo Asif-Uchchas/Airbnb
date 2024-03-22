@@ -3,6 +3,7 @@ import React from 'react';
 import { Range } from 'react-date-range';
 import Calender from '../inputs/Calender';
 import Button from '../Button';
+import { useRouter } from 'next/navigation';
 
 interface ListingReservationProps {
     price: number
@@ -24,6 +25,8 @@ const ListingReservation = ({
     disabledDates
 }: ListingReservationProps) =>
 {
+
+    const route = useRouter()
 
     return(
     <div className=' bg-white rounded-xl border-[1px] border-neutral-200 overflow-hidden'>
@@ -56,6 +59,14 @@ const ListingReservation = ({
                 <div>
                     $ {totalPrice}
                 </div>
+            </div>
+            <hr />
+            <div className=' p-4'>
+                <Button
+                    outline
+                    label='See Trips'
+                    onClick={() => route.push("/trips")}
+                />
             </div>
     </div>
   );
