@@ -23,6 +23,9 @@ const Home = async ({
       </ClientOnly>
     )
   }
+
+  // throw new Error("Something went wrong")   uncomment this to see the error.tsx in action
+  
   return (
     <ClientOnly>
       <Container>
